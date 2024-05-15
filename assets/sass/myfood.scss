@@ -55,12 +55,14 @@ header{
     margin-top: 33px;
     gap: 15px;
     flex-direction: column;
-    height: 230px;
+    height: 270px;
+    width: 90%;
+    margin-left: 25px;
 
         img{
             object-fit: cover;
             width: 100%;
-            height: 136px;
+            height: 170px;
             border-top-right-radius: 20px;
             border-top-left-radius: 20px;
         }
@@ -101,16 +103,25 @@ header{
 .rest{
     background-color: $light-gray;
     padding: 15px;
+    padding-bottom: 70px;
+    
     
 }
 
 
 .title {
     font-size: 16px;
+    margin-top: 0px;
+    
+}
+
+.subtitle{
+     margin: 0;
 }
 
 .container{
     flex-wrap: wrap;
+
     
 }
 
@@ -120,6 +131,7 @@ header{
     margin-top: -70px;
     font-size: 25px;
     padding-right: 15px;
+    
 }
 
 body {
@@ -133,10 +145,19 @@ ul{
 footer {
     background: $gray;
     color: $white;
+    padding-top: 40px;
+    padding-bottom: 20px;
 
         img{
             filter: invert(1);
-            height: 50px;
+            height: 20px;
+            padding-left: 20px;
+            
+        }
+
+        a{
+            color: $white;
+            
         }
     
 }
