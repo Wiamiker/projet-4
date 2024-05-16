@@ -7,6 +7,37 @@ a {
   text-decoration: none;
 }
 
+.list li {
+  background: #f6f6f6;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+.list .fa-solid {
+  color: #7E7E7E;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 20px;
+}
+.list .number {
+  background: #9356DC;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -30px;
+}
+
+.lastlist {
+  margin-bottom: -30%;
+}
+
 header img {
   justify-content: center;
   display: flex;
@@ -36,20 +67,19 @@ header p {
 .card {
   background-color: #FFFFFF;
   border-radius: 20px;
-  padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   display: flex;
   margin-top: 33px;
   gap: 15px;
   flex-direction: column;
-  height: 270px;
+  height: 300px;
   width: 90%;
   margin-left: 25px;
 }
 .card img {
   object-fit: cover;
   width: 100%;
-  height: 170px;
+  height: 220px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
@@ -83,21 +113,28 @@ header p {
 
 .rest {
   background-color: rgba(241, 238, 238, 0.9254901961);
-  padding: 15px;
+  padding-top: 95px;
   padding-bottom: 70px;
+}
+.rest h2 {
+  padding-left: 20px;
 }
 
 .title {
   font-size: 16px;
   margin-top: 0px;
+  padding-left: 10px;
 }
 
 .subtitle {
-  margin: 0;
+  margin-top: 0px;
+  padding-left: 10px;
 }
 
 .container {
   flex-wrap: wrap;
+  line-height: 1em;
+  padding-left: 10px;
 }
 
 .rating {
