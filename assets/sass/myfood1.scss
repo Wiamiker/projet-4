@@ -1,0 +1,32 @@
+$primarycolor: #9356DC;
+$secondcolor: #FF79DA;
+$thirdcolor : #99E2D0;
+
+
+*{
+    font-family:"shrikhand";
+    font-family: "roboto";
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+            .fa-arrow-left {
+                font-size: 25px;
+                color: black;
+            }
+
+            img{
+            margin: 20px auto;
+            width: 200px;
+            }
+
+}
+
+.header-image {
+    background-image: url('../../Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+    width: 100px;
+    height: 300px;
+}
