@@ -42,6 +42,7 @@ header p {
   align-items: center;
   flex-direction: column;
   padding: 15px;
+  margin-top: -10px;
 }
 .mainTitle p {
   text-align: center;
@@ -55,11 +56,18 @@ header p {
 .mainbtn {
   border-radius: 30px;
   padding: 15px;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#F24DF5, #9747FF);
   border: none;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  transition: background 0.3s, box-shadow 0.3s;
 }
 .mainbtn a {
   color: #FFFFFF;
+  text-decoration: none;
+}
+.mainbtn:hover {
+  background: linear-gradient(#ee6dc9, #b47ff5);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.8);
 }
 
 .card {
@@ -71,7 +79,7 @@ header p {
   gap: 15px;
   flex-direction: column;
   height: 300px;
-  width: 90%;
+  width: 9%;
   margin-left: 25px;
 }
 .card img {
@@ -82,6 +90,17 @@ header p {
   border-top-left-radius: 20px;
 }
 
+.tag {
+  background: #99E2D0;
+  color: #3b8468;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 10px 25px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
 h1 {
   padding-left: 20px;
 }
@@ -90,10 +109,12 @@ h1 {
   background: #f6f6f6;
   border-radius: 20px;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   width: 80%;
   display: flex;
   align-items: center;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+  font-weight: bold;
 }
 .list .fa-solid {
   color: #7E7E7E;
@@ -102,7 +123,7 @@ h1 {
   font-size: 20px;
 }
 .list .number {
-  background: #9356DC;
+  background: #9747FF;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -114,7 +135,7 @@ h1 {
 }
 
 .lastlist {
-  margin-bottom: -30%;
+  margin-bottom: -100px;
 }
 
 .rest {
@@ -124,6 +145,9 @@ h1 {
 }
 .rest h2 {
   padding-left: 20px;
+}
+.rest a {
+  color: #353535;
 }
 
 .title {
@@ -144,11 +168,29 @@ h1 {
 }
 
 .rating {
-  display: flex;
-  justify-content: right;
-  margin-top: -70px;
+  display: inline-block;
+  position: relative;
   font-size: 25px;
-  padding-right: 15px;
+  align-self: flex-end;
+  padding-right: 50px;
+  margin-top: -60px;
+  cursor: pointer;
+}
+.rating .fa-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s all ease;
+}
+.rating .fa-heart.fa-solid {
+  color: black;
+  opacity: 0;
+  background-color: #9747FF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rating:hover .fa-heart.fa-solid {
+  opacity: 1;
 }
 
 body {

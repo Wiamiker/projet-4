@@ -1,5 +1,5 @@
-$primarycolor: #9356DC;
-$secondcolor: #FF79DA;
+$primarycolor: #9747FF;
+$secondcolor: #F24DF5;
 $thirdcolor : #99E2D0;
 
 
@@ -55,6 +55,7 @@ header{
     align-items: center;
     flex-direction: column;
     padding: 15px;
+    margin-top: -10px;
     
             p{
                 text-align: center;
@@ -73,10 +74,18 @@ header{
     padding: 15px;
     background: linear-gradient($secondcolor,$primarycolor);
     border: none;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    transition: background 0.3s, box-shadow 0.3s;
 
             a{
                 color: #FFFFFF;
+                text-decoration: none;
             }
+
+           &:hover{
+                background: linear-gradient( #ee6dc9, #b47ff5);
+                box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.8);
+           }
 }
 
 .card {
@@ -88,7 +97,7 @@ header{
     gap: 15px;
     flex-direction: column;
     height: 300px;
-    width: 90%;
+    width: 9%;
     margin-left: 25px;
 
         img{
@@ -101,6 +110,17 @@ header{
        
 }
 
+.tag{
+    background: $thirdcolor;
+    color: #3b8468;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 25px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+}
 h1 {
     padding-left: 20px;
 }
@@ -109,10 +129,12 @@ h1 {
     background: #f6f6f6;
     border-radius: 20px;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: 80%;
     display: flex;
     align-items: center;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+    font-weight: bold;
     }
     .fa-solid{
        color: #7E7E7E;
@@ -136,7 +158,9 @@ h1 {
 }
 
 .lastlist{
-    margin-bottom: -30%;
+   margin-bottom: -100px;
+ 
+    
 }
 
 .rest{
@@ -146,6 +170,10 @@ h1 {
 
         h2{
             padding-left: 20px;
+        }
+
+        a{
+            color: #353535;
         }
     
     
@@ -171,14 +199,35 @@ h1 {
     
 }
 
-.rating{
-    display: flex;
-    justify-content: right;
-    margin-top: -70px;
+.rating {
+    display: inline-block;
+    position: relative;
     font-size: 25px;
-    padding-right: 15px;
+    align-self: flex-end;
+    padding-right: 50px;
+    margin-top: -60px;
+    cursor: pointer;
     
+    .fa-heart {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 1s all ease;
+        
+        &.fa-solid {
+            color: black;
+            opacity: 0;
+            background-color: $primarycolor;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &:hover .fa-heart.fa-solid {
+        opacity: 1;
+    }
 }
+
 
 body {
    margin: 0px;

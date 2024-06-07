@@ -1,6 +1,47 @@
+@charset "UTF-8";
 * {
-  font-family: "shrikhand";
   font-family: "roboto";
+}
+
+#loader-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+  z-index: 9999; /* Assure que le loader est au-dessus de tout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hideLoader 3s ease forwards;
+}
+#loader-overlay .loader {
+  border: 8px solid #f3f3f3; /* Gris */
+  border-top: 8px solid #9356DC; /* Couleur principale */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+@keyframes hideLoader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: "shrikhand";
+  font-size: 35px;
+  display: flex;
 }
 
 .header {
@@ -11,6 +52,7 @@
 .header .fa-arrow-left {
   font-size: 25px;
   color: black;
+  margin-left: 10px;
 }
 .header img {
   margin: 20px auto;
@@ -18,9 +60,190 @@
 }
 
 .header-image {
-  background-image: url("../../Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-  width: 100px;
-  height: 300px;
+  background-image: url("../Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: cover; /* Permet de couvrir toute la section */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Permet de centrer l'image */
+  width: 100%; /* Pour utiliser toute la largeur disponible */
+  height: 300px; /* Ajuste la hauteur selon tes besoins */
+}
+
+.header-image2 {
+  background-image: url("../Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-size: cover; /* Permet de couvrir toute la section */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Permet de centrer l'image */
+  width: 100%; /* Pour utiliser toute la largeur disponible */
+  height: 300px; /* Ajuste la hauteur selon tes besoins */
+}
+
+.header-image3 {
+  background-image: url("../Images et textes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size: cover; /* Permet de couvrir toute la section */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Permet de centrer l'image */
+  width: 100%; /* Pour utiliser toute la largeur disponible */
+  height: 300px; /* Ajuste la hauteur selon tes besoins */
+}
+
+.header-image4 {
+  background-image: url("../Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: cover; /* Permet de couvrir toute la section */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Permet de centrer l'image */
+  width: 100%; /* Pour utiliser toute la largeur disponible */
+  height: 300px; /* Ajuste la hauteur selon tes besoins */
+}
+
+.rating {
+  display: inline-block;
+  position: relative;
+  font-size: 25px;
+  align-self: flex-end;
+  padding-right: 80px;
+  margin-bottom: 68px;
+}
+.rating .fa-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s all ease;
+}
+.rating .fa-heart.fa-solid {
+  color: black;
+  opacity: 0;
+  background-color: #9356DC;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rating:hover .fa-heart.fa-solid {
+  opacity: 1;
+}
+
+.card {
+  background-color: #F6F6F6;
+  padding: 15px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: -40px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title .fa-heart {
+  font-size: 30px;
+  margin-right: 40px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: normal;
+  border-bottom: 5px solid #99E2D0;
+  width: 50px;
+  padding-bottom: 10px;
+}
+
+article {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  align-items: flex-end; /*Afin que les éléments se mettent à la fin sur une colonne*/
+  line-height: 10px;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+  position: relative; /* Added to position animated element absolutely */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+article .animated {
+  width: 0;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #99E2D0;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width ease 1s, height 1s ease;
+  position: absolute; /* Changed to absolute positioning */
+  right: 0;
+  top: 0;
+}
+article:hover {
+  padding-right: 25%;
+}
+article:hover .animated {
+  width: 20%;
+}
+
+.price {
+  font-weight: bold;
+  transition: padding-left 1s ease;
+}
+
+.fa-circle-check {
+  color: white;
+  font-size: 40px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  border-radius: 30px;
+  padding: 15px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.btn a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 20px;
+}
+.btn:hover {
+  background: linear-gradient(#ee6dc9, #b47ff5);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.8);
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  background: #353535;
+  color: #FFFFFF;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+footer img {
+  filter: invert(1);
+  height: 20px;
+  padding-left: 20px;
+}
+footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+footer li {
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=style1.css.map */
