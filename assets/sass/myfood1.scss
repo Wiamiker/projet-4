@@ -7,42 +7,6 @@ $thirdcolor : #99E2D0;
     font-family: "roboto";
 }
 
-#loader-overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
-    z-index: 9999; /* Assure que le loader est au-dessus de tout */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    .loader {
-      border: 8px solid #f3f3f3; /* Gris */
-      border-top: 8px solid $primarycolor; /* Couleur principale */
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 2s linear infinite;
-    }
-  
-    @keyframes hideLoader {
-        0% {
-          opacity: 1; // Opacité maximale
-        }
-        100% {
-          opacity: 0; // Opacité minimale
-          display: none; // Masque complètement le loader
-        }
-      }
-    
-      // Applique l'animation de masquage après 3 secondes
-      animation: hideLoader 3s ease forwards;
-    }
-
-
 
 body {
     margin: 0;
@@ -52,6 +16,10 @@ h1 {
     font-family:"shrikhand";
     font-size: 35px;
     display: flex;
+
+    @media(min-width:1024px){
+        font-size: 20px;
+    }
 }
 
 .header{
@@ -118,10 +86,18 @@ h1 {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
     }
 
     &:hover .fa-heart.fa-solid {
         opacity: 1;
+    }
+
+    @media(min-width:1024px){
+        .fa-heart {
+        padding-top: 20px;
+        margin-left: 10px;
+        }
     }
 }
 
@@ -132,6 +108,13 @@ h1 {
      border-top-left-radius: 40px;
      border-top-right-radius: 40px;
      margin-top: -40px;
+
+     @media(min-width:1024px){
+        margin-right: 200px;
+        margin-left: 200px;
+        padding-right: 200px;
+        padding-left: 200px;
+    }
 }
 
 .title {
@@ -142,6 +125,14 @@ h1 {
             .fa-heart {
                 font-size: 30px;
                 margin-right: 40px;
+            }
+
+            @media(min-width:1024px){
+                justify-content: center;
+                align-self: center;
+               .fa-heart{ 
+                font-size: 25px;
+               }
             }
 }
 
@@ -166,9 +157,7 @@ article{
      line-height: 10px;
      box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
      position: relative; /* Added to position animated element absolutely */
-     white-space: nowrap;
-     text-overflow: ellipsis;
-     overflow: hidden;
+
 
          .animated {
         width: 0;
@@ -176,10 +165,6 @@ article{
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         background: $thirdcolor;
-        text-align: center;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -187,9 +172,16 @@ article{
         position: absolute; /* Changed to absolute positioning */
         right: 0;
         top: 0;
+        overflow: hidden;
       }
   
       &:hover {
+        div.point p{
+            max-width: 80%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
         padding-right: 25%;
         .animated{
         width: 20%;
@@ -210,6 +202,33 @@ article{
      font-size: 40px;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.entrées, .plats, .desserts {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.entrées {
+    animation-delay: 0.5s;
+}
+
+.plats {
+    animation-delay: 1s;
+}
+
+.desserts {
+    animation-delay: 1.5s;
+}
 
 
 .button{
@@ -267,5 +286,23 @@ footer {
         li{
             margin-bottom: 10px;
           
+        }
+
+        @media(min-width:1024px){
+            display: flex;
+            justify-content: right;
+            flex-direction: row-reverse;
+            padding-right: 20px;
+            
+             ul{
+                display: flex;
+                gap: 20px;
+                padding-right: 20px;
+             }
+
+             img{
+             padding-top: 15px;
+             }
+             
         }
 }
