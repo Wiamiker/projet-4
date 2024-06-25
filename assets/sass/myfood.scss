@@ -223,6 +223,7 @@ h1 {
     @media(min-width:1024px){
         padding-top: 20px;
         
+        
         .content{
             display: grid;
             justify-content: space-between;
@@ -232,6 +233,7 @@ h1 {
             gap:20px 50px;
         }
         .card{
+            margin-top: 30px;
             width: 100%;
             img {
                 width: 100%;

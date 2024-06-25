@@ -153,7 +153,7 @@ article {
   border-radius: 20px;
   margin-bottom: 10px;
   align-items: flex-end; /*Afin que les éléments se mettent à la fin sur une colonne*/
-  line-height: 10px;
+  line-height: normal;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
   position: relative; /* Added to position animated element absolutely */
 }
