@@ -153,10 +153,10 @@ article{
      padding-right: 20px;
      border-radius: 20px;
      margin-bottom: 10px;
-     align-items: flex-end; /*Afin que les éléments se mettent à la fin sur une colonne*/
-     line-height: 15px;
+     align-items: center;
      box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
      position: relative; /* Added to position animated element absolutely */
+     min-height: 70px;
 
 
          .animated {
@@ -179,6 +179,15 @@ article{
         white-space: nowrap;
       }
   
+      .point {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .point h3, .point p{
+        margin:0;
+      }
+
       &:hover {
         div.point p{
             max-width: 80%;
