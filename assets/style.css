@@ -102,8 +102,6 @@ header p {
   border: none;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
   transition: background 0.3s, box-shadow 0.3s;
-}
-.mainbtn a {
   color: #FFFFFF;
   text-decoration: none;
 }
@@ -121,6 +119,7 @@ header p {
   flex-direction: column;
   height: 300px;
   width: 90%;
+  margin: auto;
 }
 .card img {
   object-fit: cover;
@@ -185,6 +184,19 @@ h1 {
   margin-bottom: -100px;
 }
 
+.content {
+  display: grid;
+  gap: 15px;
+}
+@media (min-width: 1024px) {
+  .content {
+    max-width: 1000px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 50px;
+  }
+}
+
 .rest {
   background-color: rgba(241, 238, 238, 0.9254901961);
   padding-top: 95px;
@@ -200,16 +212,8 @@ h1 {
   .rest {
     padding-top: 20px;
   }
-  .rest .content {
-    display: grid;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: auto;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 50px;
-  }
   .rest .card {
-    margin-top: 30px;
+    margin-top: 20px;
     width: 100%;
   }
   .rest .card img {
