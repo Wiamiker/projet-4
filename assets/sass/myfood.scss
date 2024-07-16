@@ -69,6 +69,12 @@ header{
             box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.6);
             color: #353535;
         }
+
+        @media(min-width: 1024px){
+            img{
+                width: 15%;
+            }
+        }
 }
 
     
@@ -292,11 +298,23 @@ h1 {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
     }
 
     &:hover .fa-heart.fa-solid {
         opacity: 1;
+
     }
+
+    @media(min-width:1024px){
+        
+    &:hover .fa-heart.fa-solid {
+        background: linear-gradient($primarycolor,$secondcolor);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    }
+
 }
 
 

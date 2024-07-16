@@ -98,6 +98,13 @@ h1 {
         padding-top: 20px;
         margin-left: 10px;
         }
+    
+         &:hover .fa-heart.fa-solid {
+                background: linear-gradient($primarycolor,$secondcolor);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            
     }
 }
 
@@ -153,10 +160,10 @@ article{
      padding-right: 20px;
      border-radius: 20px;
      margin-bottom: 10px;
-     align-items: center;
+     align-items: center;  /* Centrer les éléments verticalement */
      box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
      position: relative; /* Added to position animated element absolutely */
-     min-height: 70px;
+     min-height: 70px; /* Définir une largeur minimale pour l'article */
 
 
          .animated {
@@ -166,7 +173,7 @@ article{
         border-bottom-right-radius: 15px;
         background: $thirdcolor;
         display: flex;
-        align-items: center;
+        align-items: center; 
         justify-content: center;
         transition: width ease 1s, height 1s ease;
         position: absolute; /* Changed to absolute positioning */
@@ -180,8 +187,8 @@ article{
       }
   
       .point {
-        flex: 1;
-        min-width: 0;
+        flex: 1; /* Prend tout l'espace disponible */
+        min-width: 0; /* Permet au texte de se réduire correctement */
       }
 
       .point h3, .point p{

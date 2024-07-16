@@ -98,6 +98,11 @@ h1 {
     padding-top: 20px;
     margin-left: 10px;
   }
+  .rating:hover .fa-heart.fa-solid {
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .card {
@@ -152,10 +157,10 @@ article {
   padding-right: 20px;
   border-radius: 20px;
   margin-bottom: 10px;
-  align-items: center;
+  align-items: center; /* Centrer les éléments verticalement */
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
   position: relative; /* Added to position animated element absolutely */
-  min-height: 70px;
+  min-height: 70px; /* Définir une largeur minimale pour l'article */
 }
 article .animated {
   width: 0;
@@ -176,8 +181,8 @@ article h3 {
   white-space: nowrap;
 }
 article .point {
-  flex: 1;
-  min-width: 0;
+  flex: 1; /* Prend tout l'espace disponible */
+  min-width: 0; /* Permet au texte de se réduire correctement */
 }
 article .point h3, article .point p {
   margin: 0;
